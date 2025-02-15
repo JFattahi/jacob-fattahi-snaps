@@ -2,6 +2,7 @@ import './Nav.scss';
 
 
 function Nav() {
+    const openPanel = () => { setPanelIsOpen(!panelIsOPne)}
     return (
       <>
         <nav className="nav">

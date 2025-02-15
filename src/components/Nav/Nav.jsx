@@ -1,13 +1,15 @@
 import './Nav.scss';
 
 
-function Nav() {
-    const openPanel = () => { setPanelIsOpen(!panelIsOPne)}
+function Nav({panelState, setter}) {
+  console.log("panelState: " + panelState);
+  console.log("setPanelisOpen: " + setter);
+    const togglePanel = () => { setter(!panelState);}
     return (
       <>
         <nav className="nav">
           <h3 className="nav__title">Snaps</h3>
-          <button className="nav__button">
+          <button onClick={togglePanel} className="nav__button">
             <p className='button__text'>Filters</p>
             <svg
               width="15"

@@ -1,0 +1,48 @@
+
+
+// ------------------------------ Typography ----------------------------------------------------- //
+
+
+// Newsreader regular
+@font-face {
+  font-family: 'Newsreader';
+  src: url('../../assets/fonts/Newsreader-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+//  Newsreader light
+@font-face {
+  font-family: 'Newsreader';
+  src: url('../../assets/fonts/Newsreader-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+// Newsreader light italic
+@font-face {
+  font-family: 'Newsreader';
+  src: url('../../assets/fonts/Newsreader-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+}
+
+
+// outfit light
+@font-face {
+  font-family: 'Outfit';
+  src: url('../../assets/fonts/Outfit-Light.woff') format('woff');
+  font-weight: 300;
+}
+
+
+// outfit medium
+@font-face {
+  font-family: 'Outfit';
+  src: url('../../assets/fonts/Outfit-Medium.woff') format('woff');
+  font-weight: 500;
+}
+
+
+

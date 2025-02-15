@@ -1,0 +1,69 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography";
+@use "../../styles/partials/mixins" as *;
+
+
+.header {
+    padding: 2.5rem 1rem 3rem;
+    background-color: $pistachio;
+    margin-top: 4rem;
+
+    @include tablet {
+        margin-top: 4.5rem;
+    }
+
+    @include desktop {
+        padding: 2.5rem 2rem 3rem;
+    }
+
+    &__title {
+        font-family: 'Outfit';
+        font-size: .875rem;
+        font-weight: 300;
+
+        margin-bottom: 1.5rem;
+
+        @include tablet {
+            font-size: 1.125rem;
+        }
+
+        @include desktop {
+            font-size: 1.25rem;
+        }
+
+
+    }
+
+    // Text size: 26px | Line height: 38px | Text weight: Light 300 
+    &__text {
+        font-family: 'Newsreader';
+        font-size: 1.625rem;
+        font-weight: 300;
+        line-height: 2.375rem;
+        font-style: normal;
+
+        @include tablet {
+            // Text size: 52px | Line height: 66px | Text weight: Light 300
+            font-size: 2.5rem;
+            line-height: 3.625rem;
+
+        }
+
+        @include desktop {
+            line-height: 4.125rem;
+            font-size: 3.25rem;
+
+        }
+
+
+        &--italic {
+            font-style: italic;
+
+
+        }
+
+
+    }
+
+    
+}

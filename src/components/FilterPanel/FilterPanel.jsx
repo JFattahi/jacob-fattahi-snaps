@@ -1,28 +1,39 @@
 import './FilterPanel.scss';
-// import { useState } from "react";
+import { useState } from "react";
 import tagList from "../../data/tags.json";
 
 
 
 
-function FilterPanel(){
-    return (
-        <aside className="panel">
-            <h3 className="panel__title">
+function FilterPanel({ clickedTag, setClickedTag }) {
+    const [isClicked, setisCliked] = useState(false);
+    const tagOnClick = () => {
 
-            </h3>
-            <ul className="pane__tag-list">
-                { tagList.map( (tag)=>(
-                    <li>
-                        {tag}
-                    </li>
-
-                ) ) }
-            </ul>
-           
-        </aside>
-    )
-
+    }
+  return (
+    <aside className="panel">
+      <h3 className="panel__title"></h3>
+      <ul className={"pane__tag-list"}>
+        {tagList.map((tag) => (
+          <li
+            onClick={() => {
+              if (clickedTag === tag) {
+                setClickedTag(null);
+              } else {
+                setClickedTag(tag);
+              }
+            }}
+            className={`panel__tag ${
+              clickedTag === tag ? "panel__tag--selected" : ""
+            }`}
+            key={tag}
+          >
+            {tag}
+          </li>
+        ))}
+      </ul>
+    </aside>
+  );
 }
 
 

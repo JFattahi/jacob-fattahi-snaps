@@ -10,20 +10,28 @@ import FilterPanel from './components/FilterPanel/FilterPanel';
 
 function App() {
   const [panelisOpen, setPanelisOpen] = useState(false);
+  const [clickedTag, setClickedTag] = useState(null);
 
-  console.log("from App.jsx");
-  console.log(panelisOpen);
-  console.log(setPanelisOpen);
+  
   // const [count, setCount] = useState(0)
 
   return (
     <>
-      <Nav panelState={panelisOpen} setter={setPanelisOpen} />
-      {panelisOpen ? <FilterPanel /> : null }
-      <Header /> 
+      <Nav
+        panelState={panelisOpen}
+        setter={setPanelisOpen}
+        clickedTag={clickedTag}
+        setClickedTag={setClickedTag}
+      />
+      {/* this div will fill the gap behond the nav bar  */}
+      <div className="gap"></div>
+      {panelisOpen ? (
+        <FilterPanel clickedTag={clickedTag} setClickedTag={setClickedTag} />
+      ) : null}
+      <Header />
       <Gallery />
     </>
-  )
+  );
 }
 
 export default App

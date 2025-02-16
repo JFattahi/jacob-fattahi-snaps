@@ -1,14 +1,53 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
 .panel {
-    margin-top: 5rem;
+//   margin-top: 5rem;
+  background-color: $sage;
 
-    &__title {
+  @include tablet {
+    // margin-top: 5.5rem;
+  }
+  @include desktop {
+    // margin-top: 104px;
+  }
 
+  &__title {
+  }
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 1rem;
+
+  }
+
+  //   li {
+  //     border: 3px soild $forest-green;
+  //   }
+
+  &__tag-list {
+  }
+
+  &__tag {
+    font-size: 14px;
+    padding: .375rem .5rem;
+    background-color: $white;
+    display: inline-block;
+    border: 1px solid $forest-green;
+    border-radius: 8px;
+
+    @include tablet {
+        font-size: 18px;
+        padding: .5rem .75rem;
+        border-radius: 14px;
     }
 
-    &__tag-list {
-        list-style-type: none;
-        display: flex;
-        flex-wrap: wrap;
+    &--selected {
+        background-color: $forest-green;
+        color: $white;
     }
-
+  }
 }

@@ -8,6 +8,7 @@ function Nav({ panelState, setter, clickedTag, setClickedTag }) {
     setter(!panelState);
   };
 
+  // filter button active state
   const filterButtonNotActive = (
     <button onClick={togglePanel} className="nav__button">
       <p className="button__text">Filters</p>
@@ -26,6 +27,7 @@ function Nav({ panelState, setter, clickedTag, setClickedTag }) {
     </button>
   );
 
+  // filter button diactive state 
   const filterButtonActive = (
     <button onClick={togglePanel} className="nav__button nav__button--active">
       <p className="button__text">Filters</p>

@@ -20,6 +20,7 @@
   }
 }
 
+// list containing all the photo cards
 .photo-list {
   padding: 1.5rem 1rem;
   background-color: $pistachio;
@@ -37,7 +38,40 @@
   }
 
   @include desktop {
+    gap: 20px;
     padding: 2rem;
   }
 
+  order: -1;
+
+}
+
+// 
+.content {
+    width: 100%;
+
+    
+}
+
+.content--open-panel {
+
+    @include desktop{
+        display: inline-block;
+        width: 66%;
+        order: -1;
+    }
+
+
+}
+
+
+.outer-wrap {
+    
+
+
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+
+    }
 }

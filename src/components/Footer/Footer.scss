@@ -1,0 +1,59 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.foot {
+  color: $black;
+  background-color: $pistachio;
+  padding: 3rem 1rem 1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  h3 {
+    font-size: 2rem;
+    color: $black;
+    font-family: "Newsreader";
+    font-weight: 400;
+    font-style: normal;
+    margin: 0.5rem 0;
+
+    @include tablet {
+      font-size: 2.5rem;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $black;
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    // Text size: 10px | Line height: 12px | Text weight:
+    font-family: Outfit;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  &__icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.7rem;
+  }
+}
+
+.stain {
+  display: flex;
+  gap: 0 1rem 1rem;
+  color: $sea-green;
+  background-color: $pistachio;
+  padding: 1rem;
+
+  font-family: Outfit;
+  font-size: 12px;
+  font-weight: 500;
+}

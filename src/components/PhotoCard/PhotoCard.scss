@@ -16,8 +16,7 @@
   }
 
   @include desktop {
-    width: calc(( 100% - 2rem)/3);
-    max-width: 370px;
+    width:  370px;
 
   }
 
@@ -50,22 +49,24 @@
   &__photographer {
     display: inline-block;
 
+    // border-bottom: 0.1px solid $sea-green;
+
     position: absolute;
     right: 0;
     bottom: 0;
     background-color: $sage;
     color: $black;
-    padding: 8px;
+    padding: .5rem;
     border-top-left-radius: 8px;
 
     font-family: outfit;
     font-weight: 500;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: .75rem;
+    line-height: .9375rem;
 
     @include tablet {
-        font-size: 14px;
-        line-height: 17.5px;
+        font-size: .875rem;
+        line-height: 1.0938rem;
         font-weight: 500;
     }
 
@@ -73,10 +74,10 @@
   }
 
   &__tags {
-    padding: 8px;
+    padding: .5rem;
 
     @include tablet {
-        padding: 16px;
+        padding: 1rem;
     }
 
   }
@@ -84,20 +85,20 @@
   &__tag {
     font-family: outfit;
     font-weight: 500;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: .75rem;
+    line-height: .9375rem;
 
     background-color: $white;
     border: 1px solid $sea-green;
-    padding: 6px 8px;
+    padding: .375rem .5rem;
     border-radius: 6px;
 
     @include tablet {
-        padding: 8px 12px;
-        border-radius: 12px;
+        padding: .5rem .75rem;
+        border-radius: .75rem;
 
-        font-size: 14px;
-        line-height: 17.5px;
+        font-size: .875rem;
+        line-height: 1.0938rem;
         font-weight: 500;
     }
   }

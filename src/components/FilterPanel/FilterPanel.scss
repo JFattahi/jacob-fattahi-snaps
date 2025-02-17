@@ -2,19 +2,18 @@
 @use "../../styles/partials/mixins" as *;
 
 .panel {
-//   margin-top: 5rem;
+  display: block;
   background-color: $sage;
 
   @include tablet {
-    // margin-top: 5.5rem;
   }
   @include desktop {
-    // margin-top: 104px;
+    display: inline-block;
+    width: 34%;
+    padding: 3rem;
   }
 
-  &__title {
-  }
-
+  
   ul {
     list-style-type: none;
     display: flex;
@@ -24,12 +23,8 @@
 
   }
 
-  //   li {
-  //     border: 3px soild $forest-green;
-  //   }
 
-  &__tag-list {
-  }
+
 
   &__tag {
     font-size: 14px;

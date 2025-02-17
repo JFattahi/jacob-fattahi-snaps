@@ -25,6 +25,7 @@
 
         @include tablet {
             font-size: 1.125rem;
+
         }
 
         @include desktop {
@@ -51,7 +52,8 @@
 
         @include desktop {
             line-height: 4.125rem;
-            font-size: 3.25rem;
+            font-size: 3rem;
+            max-width: 730px;
 
         }
 

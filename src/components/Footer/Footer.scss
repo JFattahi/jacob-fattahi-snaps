@@ -15,14 +15,11 @@
     flex-wrap: wrap;
     gap: 7rem;
     margin-top: 2rem;
-
-
   }
 
   @include desktop {
     padding: 4rem 2rem 2rem;
     margin-bottom: 14rem;
-
   }
 
   h3 {
@@ -37,14 +34,14 @@
       font-size: 2.5rem;
     }
 
-    @include desktop{
-        font-size: 2.8125rem;
+    @include desktop {
+      font-size: 2.8125rem;
     }
   }
 
   &__title {
     @include tablet {
-        flex-grow: 1;
+      flex-grow: 1;
     }
   }
 
@@ -60,12 +57,12 @@
 
     // Text size: 10px | Line height: 12px | Text weight:
     font-family: Outfit;
-    font-size: .75rem;
+    font-size: 0.75rem;
     font-weight: 500;
 
     @include tablet {
-        font-size: 1rem;
-        margin-right: 1rem;
+      font-size: 1rem;
+      margin-right: 1rem;
     }
   }
 
@@ -75,16 +72,14 @@
     margin-top: 0.7rem;
 
     @include tablet {
-        width: 100%;
-        margin-top: 7rem;
+      width: 100%;
+      margin-top: 7rem;
     }
 
     @include desktop {
-        margin-top: 0;
-        width: fit-content;
-        justify-content: flex-start;
-        // margin-bottom: 4rem;
-
+      margin-top: 0;
+      width: fit-content;
+      justify-content: flex-start;
     }
   }
 }
@@ -97,11 +92,11 @@
   padding: 0 1rem 1rem;
 
   font-family: Outfit;
-  font-size: .75rem;
+  font-size: 0.75rem;
   font-weight: 500;
 
   @include tablet {
-    font-size: .875rem;
+    font-size: 0.875rem;
   }
   @include desktop {
     padding-left: 0 2rem 2rem;

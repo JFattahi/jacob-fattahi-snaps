@@ -3,9 +3,9 @@
 @use "../../styles/partials/mixins" as *;
 
 .nav {
-    position: fixed;
-    width: 100%;
-    top: 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
   padding: 1.5rem 1rem;
   display: flex;
   justify-content: space-between;
@@ -27,18 +27,18 @@
     align-self: center;
 
     @include tablet {
-        font-size: 2.5rem;
+      font-size: 2.5rem;
     }
-  @include desktop {
-    font-size: 2.8125rem;
-  }
+    @include desktop {
+      font-size: 2.8125rem;
+    }
   }
 
   &__button {
     height: fit-content;
     align-self: center;
     background-color: $pistachio;
-    padding: .25rem 1rem;
+    padding: 0.25rem 1rem;
     color: $forest-green;
     border: 2px solid $forest-green;
     border-radius: 9999px;
@@ -58,12 +58,11 @@
     }
 
     @include tablet {
-        font-size: 1rem;
+      font-size: 1rem;
     }
 
     @include desktop {
-        font-size: 1.25rem;
+      font-size: 1.25rem;
     }
-  
   }
 }

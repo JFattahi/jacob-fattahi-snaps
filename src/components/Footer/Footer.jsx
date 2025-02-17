@@ -1,8 +1,8 @@
 import "./Footer.scss";
-import facebook from '../../assets/icons/Facebook.svg';
-import tweeter from '../../assets/icons/X_twitter.svg';
-import instagram from '../../assets/icons/Instagram.svg';
-import pintrest from '../../assets/icons/Pinterest.svg';
+import facebook from "../../assets/icons/Facebook.svg";
+import tweeter from "../../assets/icons/X_twitter.svg";
+import instagram from "../../assets/icons/Instagram.svg";
+import pintrest from "../../assets/icons/Pinterest.svg";
 
 function Footer() {
   return (

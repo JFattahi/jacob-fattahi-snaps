@@ -1,15 +1,10 @@
-import './FilterPanel.scss';
+import "./FilterPanel.scss";
 import { useState } from "react";
 import tagList from "../../data/tags.json";
 
-
-
-
 function FilterPanel({ clickedTag, setClickedTag }) {
-    const [isClicked, setisCliked] = useState(false);
-    const tagOnClick = () => {
-
-    }
+  const [isClicked, setisCliked] = useState(false);
+  const tagOnClick = () => {};
   return (
     <aside className="panel">
       <h3 className="panel__title"></h3>
@@ -35,6 +30,5 @@ function FilterPanel({ clickedTag, setClickedTag }) {
     </aside>
   );
 }
-
 
 export default FilterPanel;

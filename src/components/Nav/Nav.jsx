@@ -1,9 +1,6 @@
-import './Nav.scss';
-
+import "./Nav.scss";
 
 function Nav({ panelState, setter, clickedTag, setClickedTag }) {
-  console.log("panelState: " + panelState);
-  console.log("setPanelisOpen: " + setter);
   const togglePanel = () => {
     setter(!panelState);
   };
@@ -27,7 +24,7 @@ function Nav({ panelState, setter, clickedTag, setClickedTag }) {
     </button>
   );
 
-  // filter button diactive state 
+  // filter button diactive state
   const filterButtonActive = (
     <button onClick={togglePanel} className="nav__button nav__button--active">
       <p className="button__text">Filters</p>

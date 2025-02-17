@@ -48,8 +48,6 @@ function App() {
       </div>
 
       <Footer />
-
-
     </>
   );
 }

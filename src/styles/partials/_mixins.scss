@@ -1,24 +1,20 @@
-
 // break points
-$tablet-breakpoint: 768PX;
-$desktop-breakpoint: 1280PX;
-
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1280px;
 
 //  ----------------------------------------- responsiveness mixins ---------------------------------
 @mixin tablet {
-    @media (min-width: $tablet-breakpoint) {
-        @content;
-    }
+  @media (min-width: $tablet-breakpoint) {
+    @content;
+  }
 }
 
 @mixin desktop {
-    @media (min-width: $desktop-breakpoint) {
-        @content;
-    }
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
 }
 
-
-
 // @include desktop {
- 
+
 // }

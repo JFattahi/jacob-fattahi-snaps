@@ -1,8 +1,8 @@
 import "./PhotoCard.scss";
 
-function PhotoCard({photo, id, panelisOpen}) {
+function PhotoCard({ photo, id, panelisOpen }) {
   return (
-    <div className={`photo ${ panelisOpen ? "photo--openPanel" : ""}`}>
+    <div className={`photo ${panelisOpen ? "photo--openPanel" : ""}`}>
       <div className="photo__content">
         <img
           className="photo__image"

@@ -39,6 +39,7 @@ function App() {
                   className="photo-card"
                   photo={photo}
                   key={photo.id}
+                  panelisOpen={panelisOpen}
                 />
               );
             })}

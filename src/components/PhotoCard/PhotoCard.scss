@@ -16,9 +16,18 @@
   }
 
   @include desktop {
-    width:  370px;
+
+    max-width: none;
+    width: calc( (100% - 2.5rem ) /3);
+    // width:  370px;
+
+    &--openPanel {
+    width: calc( (100% - 1.25rem ) /2);
+  }
 
   }
+
+  
 
 
   ul {

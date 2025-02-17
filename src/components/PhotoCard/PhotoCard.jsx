@@ -1,8 +1,8 @@
 import "./PhotoCard.scss";
 
-function PhotoCard({photo, id}) {
+function PhotoCard({photo, id, panelisOpen}) {
   return (
-    <div className="photo">
+    <div className={`photo ${ panelisOpen ? "photo--openPanel" : ""}`}>
       <div className="photo__content">
         <img
           className="photo__image"
@@ -15,7 +15,9 @@ function PhotoCard({photo, id}) {
       <div className="photo__tags">
         <ul>
           {photo.tags.map((tag) => (
-            <li className="photo__tag" tag={tag} key={tag}>{tag}</li>
+            <li className="photo__tag" tag={tag} key={tag}>
+              {tag}
+            </li>
           ))}
         </ul>
       </div>

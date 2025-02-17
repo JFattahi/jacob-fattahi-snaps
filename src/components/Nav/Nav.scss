@@ -57,6 +57,17 @@
       background-color: $forest-green;
     }
 
+    &:hover {
+      background-color: $forest-green;
+      color: $white;
+
+      svg {
+        fill: red;
+      }
+
+
+    }
+
     @include tablet {
       font-size: 1rem;
     }

@@ -3,17 +3,22 @@ import photos from "./data/photos.json";
 
 import './App.scss';
 import Nav from './components/Nav/Nav';
-import Gallery from './components/Gallery/Gallery';
+// import Gallery from './components/Gallery/Gallery';
 
 import Header from './components/Header/Header';
 import FilterPanel from './components/FilterPanel/FilterPanel';
+import PhotoCard from './components/PhotoCard/PhotoCard';
 
 function App() {
+
   const [panelisOpen, setPanelisOpen] = useState(false);
   const [clickedTag, setClickedTag] = useState(null);
+    const filteredPhotos = clickedTag
+      ? photos.filter( (photo) => photo.tags.includes(clickedTag) )
+      : photos;
+
 
   
-  // const [count, setCount] = useState(0)
 
   return (
     <>
@@ -29,7 +34,18 @@ function App() {
         <FilterPanel clickedTag={clickedTag} setClickedTag={setClickedTag} />
       ) : null}
       <Header />
-      <Gallery />
+      <div className="photo-list">
+        {filteredPhotos.map((photo) => {
+          return (
+            <PhotoCard
+              className = 'photo-card'
+              photo={photo}
+              key={photo.id}
+              
+            />
+          );
+        })}
+      </div>
     </>
   );
 }

@@ -1,0 +1,104 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.photo {
+  background-color: $sage;
+  border: 1px solid $sea-green;
+  border-radius: 8px;
+
+  width: 100%;
+  max-width: 390px;
+
+  @include tablet {
+    width: calc(( 100% - 1rem )/2);
+    max-width: 370px;
+
+  }
+
+  @include desktop {
+    width: calc(( 100% - 2rem)/3);
+    max-width: 370px;
+
+  }
+
+
+  ul {
+    height: fit-content;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    @include tablet {
+
+    }
+  }
+
+  &__content {
+    position: relative;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 8px;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  &__photographer {
+    display: inline-block;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: $sage;
+    color: $black;
+    padding: 8px;
+    border-top-left-radius: 8px;
+
+    font-family: outfit;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+
+    @include tablet {
+        font-size: 14px;
+        line-height: 17.5px;
+        font-weight: 500;
+    }
+
+    
+  }
+
+  &__tags {
+    padding: 8px;
+
+    @include tablet {
+        padding: 16px;
+    }
+
+  }
+
+  &__tag {
+    font-family: outfit;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+
+    background-color: $white;
+    border: 1px solid $sea-green;
+    padding: 6px 8px;
+    border-radius: 6px;
+
+    @include tablet {
+        padding: 8px 12px;
+        border-radius: 12px;
+
+        font-size: 14px;
+        line-height: 17.5px;
+        font-weight: 500;
+    }
+  }
+}

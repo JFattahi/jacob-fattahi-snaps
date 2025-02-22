@@ -1,53 +1,51 @@
-import { useState } from "react";
-import photos from "./data/photos.json";
+import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+
+import { useState, useEffect } from "react";
 
 import "./App.scss";
-import Nav from "./components/Nav/Nav";
+import HomePage from "./pages/HomePage/HomePage";
+import PhotoDetailsPage from "./pages/PhotoDetailsPage/PhotoDetailsPage";
 
-import Header from "./components/Header/Header";
-import FilterPanel from "./components/FilterPanel/FilterPanel";
-import PhotoCard from "./components/PhotoCard/PhotoCard";
-import Footer from "./components/Footer/Footer";
+import { BASE_URL, API_KEY } from "./utils";
+import axios from "axios";
+
+
 
 function App() {
-  const [panelisOpen, setPanelisOpen] = useState(false);
-  const [clickedTag, setClickedTag] = useState(null);
-  const filteredPhotos = clickedTag
-    ? photos.filter((photo) => photo.tags.includes(clickedTag))
-    : photos;
+
+  const [photosArray, setPhotosArray] = useState([]);
+
+
+  // this function gets the photos array from the API
+  async function getPhotosArray() {
+
+    try {
+
+      const {data} = await axios.get(`${BASE_URL}/photos?api_key=${API_KEY}`);
+      setPhotosArray(data);
+
+    } catch (error) {
+      console.log(error);  
+    }
+
+  }
+
+  // get the photos array on page mount
+  useEffect(  () => {getPhotosArray()}, []);
+  
+  if(photosArray.length === 0){
+    return <h1 className="loading" >Loading ...</h1>
+  }
 
   return (
     <>
-      <Nav
-        panelState={panelisOpen}
-        setter={setPanelisOpen}
-        clickedTag={clickedTag}
-        setClickedTag={setClickedTag}
-      />
-      {/* this div will fill the gap behind the nav bar  */}
-      <div className="gap"></div>
-      <div className="outer-wrap">
-        {panelisOpen ? (
-          <FilterPanel clickedTag={clickedTag} setClickedTag={setClickedTag} />
-        ) : null}
-        <div className={`content ${panelisOpen ? "content--open-panel" : ""}`}>
-          <Header />
-          <div className="photo-list ">
-            {filteredPhotos.map((photo) => {
-              return (
-                <PhotoCard
-                  className="photo-card"
-                  photo={photo}
-                  key={photo.id}
-                  panelisOpen={panelisOpen}
-                />
-              );
-            })}
-          </div>
-        </div>
-      </div>
-
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage photosArray={photosArray} />}></Route>
+          <Route path="/photoDetails/:id" element={<PhotoDetailsPage />}></Route>
+          <Route path="*" element={<h1>404 Page Not Found! </h1>}></Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

@@ -2,7 +2,7 @@ import "./Nav.scss";
 import { useState } from "react";
 
 
-function Nav({ panelState, setter, clickedTag, setClickedTag }) {
+function Nav({ panelState, setter }) {
   const [hover, setHover] = useState(false);
   const togglePanel = () => {
     setter(!panelState);

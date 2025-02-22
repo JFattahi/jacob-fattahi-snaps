@@ -60,11 +60,9 @@
     &:hover {
       background-color: $forest-green;
       color: $white;
+      cursor: pointer;
 
-      svg {
-        fill: red;
-      }
-
+      
 
     }
 
@@ -76,4 +74,5 @@
       font-size: 1.25rem;
     }
   }
+
 }

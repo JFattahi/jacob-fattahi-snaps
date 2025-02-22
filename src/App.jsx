@@ -24,7 +24,7 @@ function App() {
         clickedTag={clickedTag}
         setClickedTag={setClickedTag}
       />
-      {/* this div will fill the gap behond the nav bar  */}
+      {/* this div will fill the gap behind the nav bar  */}
       <div className="gap"></div>
       <div className="outer-wrap">
         {panelisOpen ? (

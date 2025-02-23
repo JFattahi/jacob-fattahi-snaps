@@ -33,10 +33,6 @@ function App() {
   // get the photos array on page mount
   useEffect(  () => {getPhotosArray()}, []);
   
-  if(photosArray.length === 0){
-    return <h1 className="loading" >Loading ...</h1>
-  }
-
   return (
     <>
       <BrowserRouter>

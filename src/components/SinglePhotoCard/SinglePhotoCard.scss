@@ -3,6 +3,7 @@
 @use "../../styles/partials/mixins" as *;
 
 .singlePhotoCard {
+  color: $black;
   background-color: $sage;
   border: 2px solid $sea-green;
   border-radius: 8px;
@@ -13,11 +14,7 @@
 
   @include desktop {
     max-width: none;
-
   }
-
-
-
 
   ul {
     height: fit-content;
@@ -26,8 +23,7 @@
     flex-wrap: wrap;
     gap: 8px;
 
-    @include tablet {
-    }
+   
   }
 
   &__content {
@@ -75,7 +71,7 @@
     }
 
     @include desktop {
-        padding: 2rem 2rem 1.25rem;
+      padding: 2rem 2rem 1.25rem;
     }
   }
 
@@ -99,9 +95,9 @@
     }
 
     @include desktop {
-        font-size: 1.5rem;
-        padding: .82rem 1.38rem;
-        border-radius: 14px;
+      font-size: 1.5rem;
+      padding: 0.82rem 1.38rem;
+      border-radius: 14px;
     }
   }
 
@@ -123,8 +119,8 @@
     }
 
     @include desktop {
-        font-size: 1.5rem;
-        padding: 1.25rem 2rem 2rem;
+      font-size: 1.5rem;
+      padding: 1.25rem 2rem 2rem;
     }
 
     .likes {
@@ -153,8 +149,6 @@
         order: 1;
       }
     }
-
-    .photographer {
-    }
+    
   }
 }

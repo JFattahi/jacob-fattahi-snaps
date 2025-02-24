@@ -54,7 +54,6 @@
       @include tablet {
         width: 25px;
       }
-
     }
 
     .return-btn__arrow {
@@ -82,7 +81,7 @@
 
 // --------------------------------------- main -------------------------------//
 .main {
-  padding: 1rem;
+  padding: 1rem 1rem 3rem;
 
   display: flex;
   flex-direction: column;
@@ -91,13 +90,12 @@
   gap: 2rem;
 
   @include tablet {
-    padding: 1rem 1rem;
+    padding: 1rem 1rem 3rem;
     gap: 3rem;
   }
 
   @include desktop {
-    // padding: 1rem;
-    padding: 5rem 17% 2rem;
+    padding: 5rem 17% 3rem;
     gap: 4rem;
   }
 }

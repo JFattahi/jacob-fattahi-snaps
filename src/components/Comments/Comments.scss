@@ -1,0 +1,64 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography";
+@use "../../styles/partials/mixins" as *;
+
+.comments {
+  margin-top: 1.25rem;
+
+  &__count {
+    font-family: "Outfit";
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    color: $black;
+    font-size: 1.125rem;
+
+    @include tablet {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  &__comment {
+    border-top: 1.5px solid $sea-green;
+    padding: 0 0;
+  }
+
+  // Text size: 10px | Line height: 12px | Text weight: Medium 500
+  &__comment-header {
+    margin: 0.875rem 0;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Outfit";
+    font-weight: 500;
+    color: $forest-green;
+
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+
+    @include tablet {
+      font-size: 0.875rem;
+      margin: 1rem 0;
+    }
+
+    @include desktop {
+      font-size: 0.94rem;
+    }
+  }
+  &__comment-text {
+    font-family: "Outfit";
+    font-weight: 400;
+    color: $black;
+    margin-bottom: 0.875rem;
+
+    font-size: 0.875rem;
+
+    @include tablet {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    @include desktop {
+      font-size: 1.33rem;
+    }
+  }
+}

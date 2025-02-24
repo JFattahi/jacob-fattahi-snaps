@@ -5,6 +5,7 @@ import { BASE_URL, API_KEY } from "../../utils";
 import Form from "../../components/Form/Form";
 import Footer from "../../components/Footer/Footer";
 import SinglePhotoCard from "../../components/SinglePhotoCard/SinglePhotoCard";
+import Comments from "../../components/Comments/Comments";
 import arrow from "../../assets/icons/Arrow.svg";
 import axios from "axios";
 
@@ -75,6 +76,7 @@ function PhotoDetailsPage() {
         <main className="main">
           <SinglePhotoCard photo={photo} />
           <Form id={id} getComments={getComments} />
+          <Comments comments={comments} />
         </main>
         <Footer />
       </>

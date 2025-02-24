@@ -24,6 +24,14 @@
     padding: 8px;
     border-radius: 8px;
     background: $white;
+    font-family: 'Outfit';
+    font-weight: 400;
+    font-size: 1rem;
+
+    @include tablet {
+        font-size: 1.125rem;
+    }
+
   }
   input:hover,
   textarea:hover {
@@ -41,10 +49,7 @@
     }
   }
 
-  &__name-label{
-
-  }
-
+  
   &__comment-label {
     margin-top: 0.5rem;
   }
@@ -81,4 +86,8 @@
     }
 
   }
+  .border-red {
+    border-color: #B10606;
+  }
+
 }

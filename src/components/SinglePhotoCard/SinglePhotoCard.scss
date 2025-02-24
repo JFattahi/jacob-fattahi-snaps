@@ -1,0 +1,160 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography";
+@use "../../styles/partials/mixins" as *;
+
+.singlePhotoCard {
+  background-color: $sage;
+  border: 2px solid $sea-green;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 750px;
+
+  align-self: center;
+
+  @include desktop {
+    max-width: none;
+
+  }
+
+
+
+
+  ul {
+    height: fit-content;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    @include tablet {
+    }
+  }
+
+  &__content {
+    position: relative;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 8px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  &__photographer {
+    display: inline-block;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: $sage;
+    color: $black;
+    padding: 0.5rem;
+    border-top-left-radius: 8px;
+
+    font-family: outfit;
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 0.9375rem;
+
+    @include tablet {
+      font-size: 0.875rem;
+      line-height: 1.0938rem;
+      font-weight: 500;
+    }
+  }
+
+  &__tags {
+    padding: 1rem;
+
+    @include tablet {
+      padding: 1.5rem 1.5rem 1rem;
+    }
+
+    @include desktop {
+        padding: 2rem 2rem 1.25rem;
+    }
+  }
+
+  &__tag {
+    font-family: outfit;
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 0.9375rem;
+
+    background-color: $white;
+    border: 1px solid $sea-green;
+    padding: 0.375rem 0.5rem;
+    border-radius: 6px;
+
+    @include tablet {
+      padding: 0.5rem 1rem;
+      border-radius: 9px;
+      font-size: 1.25rem;
+      line-height: 1.0938rem;
+      font-weight: 400;
+    }
+
+    @include desktop {
+        font-size: 1.5rem;
+        padding: .82rem 1.38rem;
+        border-radius: 14px;
+    }
+  }
+
+  &__info {
+    font-family: "outfit";
+    font-weight: 400;
+
+    display: flex;
+    row-gap: 0.625rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding: 0.5rem 1rem 1rem;
+    font-size: 1rem;
+
+    @include tablet {
+      padding: 1rem 1.5rem 1.5rem;
+      font-size: 1.1875rem;
+    }
+
+    @include desktop {
+        font-size: 1.5rem;
+        padding: 1.25rem 2rem 2rem;
+    }
+
+    .likes {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      height: fit-content;
+
+      img {
+        height: 16px;
+      }
+
+      width: 50%;
+      @include tablet {
+        width: fit-content;
+      }
+    }
+
+    .date {
+      display: flex;
+      flex-direction: row-reverse;
+      width: 50%;
+
+      @include tablet {
+        width: fit-content;
+        order: 1;
+      }
+    }
+
+    .photographer {
+    }
+  }
+}

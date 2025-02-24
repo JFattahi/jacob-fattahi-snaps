@@ -1,0 +1,84 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography";
+@use "../../styles/partials/mixins" as *;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  font-family: "Outfit";
+  font-weight: 400;
+
+  width: 100%;
+  max-width: 750px;
+  align-self: center;
+
+  @include desktop{
+    max-width: none;
+  }
+
+  input,
+  textarea {
+    border: 2px solid $sea-green;
+    padding: 8px;
+    border-radius: 8px;
+    background: $white;
+  }
+  input:hover,
+  textarea:hover {
+    border-color: $forest-green;
+  }
+
+  label {
+    font-size: 1rem;
+
+    @include tablet {
+        font-size: 1.25rem;
+    }
+    @include desktop {
+        font-size: 1.5rem;
+    }
+  }
+
+  &__name-label{
+
+  }
+
+  &__comment-label {
+    margin-top: 0.5rem;
+  }
+  &__name-input{
+    min-height: 30px;
+
+    @include tablet {
+        min-height: 40px;
+    
+    }
+  }
+
+  &__comment-input{
+    height: 60px;
+  }
+
+  &__submit-btn {
+    height: fit-content;
+    background-color: $forest-green;
+    color: $white;
+    border: none;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    border-radius: 6px;
+    width: fit-content;
+    align-self: flex-end;
+
+    margin-top: 0.5rem;
+
+    font-size: .875rem;
+
+    @include tablet {
+        font-size: 1rem;
+    }
+
+  }
+}

@@ -1,10 +1,25 @@
 import "./FilterPanel.scss";
-import { useState } from "react";
-import tagList from "../../data/tags.json";
+import { useState, useEffect } from "react";
+// import tagList from "../../data/tags.json";
+import { BASE_URL, API_KEY } from "../../utils";
+import axios from "axios";
 
 function FilterPanel({ clickedTag, setClickedTag }) {
-  const [isClicked, setisCliked] = useState(false);
-  const tagOnClick = () => {};
+  const [tagList, setTagList] = useState([]);
+
+  // get tag list from API
+  async function getTagList() {
+    try {
+      const { data } = await axios.get(`${BASE_URL}/tags?api_key=${API_KEY}`);
+      setTagList(data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  useEffect(  () => {getTagList()}, []);
+
+
   return (
     <aside className="panel">
       <h3 className="panel__title"></h3>

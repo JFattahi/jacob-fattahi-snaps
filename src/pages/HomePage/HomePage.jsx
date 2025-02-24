@@ -33,6 +33,7 @@ function HomePage( {photosArray} ) {
                   className="photo-card"
                   photo={photo}
                   key={photo.id}
+                  id={photo.id}
                   panelisOpen={panelisOpen}
                 />
               );

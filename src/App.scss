@@ -12,3 +12,18 @@ body {
   background-color: $pistachio;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.loading {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 400;
+  margin: 2rem;
+}
+
+textarea {
+  resize: none;
+}

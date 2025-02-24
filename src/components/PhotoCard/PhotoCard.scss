@@ -1,6 +1,8 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
+
+
 .photo {
   background-color: $sage;
   border: 1px solid $sea-green;
@@ -98,5 +100,7 @@
       line-height: 1.0938rem;
       font-weight: 500;
     }
+    
   }
-}
+
+} // end of .photo

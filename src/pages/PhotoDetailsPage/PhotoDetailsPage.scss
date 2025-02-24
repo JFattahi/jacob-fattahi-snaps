@@ -1,0 +1,103 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography";
+@use "../../styles/partials/mixins" as *;
+
+// ------------------------------ nav -----------------------
+.nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 1.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $pistachio;
+  z-index: 999;
+
+  @include tablet {
+  }
+  @include desktop {
+    padding: 2rem 2rem;
+  }
+
+  &__title {
+    font-size: 2rem;
+    color: $black;
+    font-family: "Newsreader";
+    font-weight: 400;
+    font-style: normal;
+    align-self: center;
+
+    @include tablet {
+      font-size: 2.5rem;
+    }
+    @include desktop {
+      font-size: 2.8125rem;
+    }
+  }
+
+  &__return-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    height: fit-content;
+
+    img {
+      height: 100%;
+      width: 100%;
+      width: 18px;
+
+      @include tablet {
+        width: 21px;
+      }
+      @include tablet {
+        width: 25px;
+      }
+
+    }
+
+    .return-btn__arrow {
+      height: fit-content;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    .return-btn__home-label {
+      font-family: "Newsreader";
+      font-size: 1.125rem;
+      font-weight: 400;
+
+      color: $forest-green;
+
+      @include tablet {
+        font-size: 1.5rem;
+      }
+      @include tablet {
+        font-size: 1.75rem;
+      }
+    }
+  }
+} // end of nav
+
+// --------------------------------------- main -------------------------------//
+.main {
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 2rem;
+
+  @include tablet {
+    padding: 1rem 1rem;
+    gap: 3rem;
+  }
+
+  @include desktop {
+    // padding: 1rem;
+    padding: 5rem 17% 2rem;
+    gap: 4rem;
+  }
+}

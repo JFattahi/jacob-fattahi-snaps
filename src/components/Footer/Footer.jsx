@@ -1,4 +1,5 @@
 import "./Footer.scss";
+import { NavLink } from "react-router-dom";
 import facebook from "../../assets/icons/Facebook.svg";
 import tweeter from "../../assets/icons/X_twitter.svg";
 import instagram from "../../assets/icons/Instagram.svg";
@@ -8,9 +9,11 @@ function Footer() {
   return (
     <>
       <div className="foot">
-        <div className="foot__title">
-          <h3>Snaps</h3>
-        </div>
+        <NavLink to={`/`} className={() => ""}>
+          <div className="foot__title">
+            <h3>Snaps</h3>
+          </div>
+        </NavLink>
         <div className="foot__col">
           <a href="">For photographers</a>
           <a href="">Hire talent</a>

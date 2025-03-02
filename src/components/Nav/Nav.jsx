@@ -1,5 +1,7 @@
 import "./Nav.scss";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
+
 
 
 function Nav({ panelState, setter }) {
@@ -58,7 +60,9 @@ function Nav({ panelState, setter }) {
   return (
     <>
       <nav className="nav">
-        <h3 className="nav__title">Snaps</h3>
+        <NavLink to={`/`} className={() => ""}>
+          <h3 className="nav__title">Snaps</h3>
+        </NavLink>
         {panelState ? filterButtonActive : filterButtonNotActive}
       </nav>
     </>

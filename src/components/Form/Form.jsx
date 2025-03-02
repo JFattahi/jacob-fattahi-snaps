@@ -1,7 +1,7 @@
 import "./Form.scss";
 import { useState } from "react";
 import axios from "axios";
-import { BASE_URL, API_KEY } from "../../utils";
+import { VITE_BASE_URL, API_KEY } from "../../utils";
 
 function Form({ id, getComments }) {
   const [name, setName] = useState("");
@@ -18,13 +18,16 @@ function Form({ id, getComments }) {
     };
     setErrors(newErrors);
 
-    if (newErrors.name || newErrors.comment) return; 
+    if (newErrors.name || newErrors.comment) return;
 
     try {
-      await axios.post(`${BASE_URL}/photos/${id}/comments?api_key=${API_KEY}`, {
-        name,
-        comment,
-      });
+      await axios.post(
+        `${VITE_BASE_URL}/photos/${id}/comments?api_key=${API_KEY}`,
+        {
+          name,
+          comment,
+        }
+      );
     } catch (error) {
       console.log(error);
     }

@@ -25,3 +25,6 @@ dist-ssr
 
 # SCSS-related cache and generated files
 *.css.map
+
+# .env file
+.env

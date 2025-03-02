@@ -14,7 +14,7 @@
   max-width: 750px;
   align-self: center;
 
-  @include desktop{
+  @include desktop {
     max-width: none;
   }
 
@@ -24,17 +24,23 @@
     padding: 8px;
     border-radius: 8px;
     background: $white;
-    font-family: 'Outfit';
+    font-family: "Outfit";
     font-weight: 400;
     font-size: 1rem;
 
     @include tablet {
-        font-size: 1.125rem;
+      font-size: 1.125rem;
     }
-
   }
+
   input:hover,
   textarea:hover {
+    border-color: $forest-green;
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: none;
     border-color: $forest-green;
   }
 
@@ -42,27 +48,28 @@
     font-size: 1rem;
 
     @include tablet {
-        font-size: 1.25rem;
+      font-size: 1.25rem;
     }
     @include desktop {
-        font-size: 1.5rem;
+      font-size: 1.5rem;
     }
   }
 
-  
   &__comment-label {
     margin-top: 0.5rem;
   }
-  &__name-input{
+
+  // -------------------- input ----------------------------
+  &__name-input {
     min-height: 30px;
 
     @include tablet {
-        min-height: 40px;
-    
+      min-height: 40px;
     }
   }
 
-  &__comment-input{
+  // ------------------------ text area --------------------------
+  &__comment-input {
     height: 60px;
   }
 
@@ -71,7 +78,7 @@
     background-color: $forest-green;
     color: $white;
     border: none;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     cursor: pointer;
     border-radius: 6px;
     width: fit-content;
@@ -79,15 +86,13 @@
 
     margin-top: 0.5rem;
 
-    font-size: .875rem;
+    font-size: 0.875rem;
 
     @include tablet {
-        font-size: 1rem;
+      font-size: 1rem;
     }
-
   }
   .border-red {
-    border-color: #B10606;
+    border-color: $border-red;
   }
-
 }

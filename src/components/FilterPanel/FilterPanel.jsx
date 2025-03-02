@@ -1,7 +1,7 @@
 import "./FilterPanel.scss";
 import { useState, useEffect } from "react";
 // import tagList from "../../data/tags.json";
-import { BASE_URL, API_KEY } from "../../utils";
+import { VITE_BASE_URL, API_KEY } from "../../utils";
 import axios from "axios";
 
 function FilterPanel({ clickedTag, setClickedTag }) {
@@ -10,15 +10,18 @@ function FilterPanel({ clickedTag, setClickedTag }) {
   // get tag list from API
   async function getTagList() {
     try {
-      const { data } = await axios.get(`${BASE_URL}/tags?api_key=${API_KEY}`);
+      const { data } = await axios.get(
+        `${VITE_BASE_URL}/tags?api_key=${API_KEY}`
+      );
       setTagList(data);
     } catch (error) {
       console.log(error);
     }
   }
 
-  useEffect(  () => {getTagList()}, []);
-
+  useEffect(() => {
+    getTagList();
+  }, []);
 
   return (
     <aside className="panel">

@@ -1,7 +1,7 @@
 import "./PhotoDetailsPage.scss";
 import { NavLink, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { BASE_URL, API_KEY } from "../../utils";
+import { VITE_BASE_URL, API_KEY } from "../../utils";
 import Form from "../../components/Form/Form";
 import Footer from "../../components/Footer/Footer";
 import SinglePhotoCard from "../../components/SinglePhotoCard/SinglePhotoCard";
@@ -22,65 +22,59 @@ function PhotoDetailsPage() {
     try {
       //   get a single photo by its id
       const photoResponse = await axios.get(
-        `${BASE_URL}/photos/${id}?api_key=${API_KEY}`
+        `${VITE_BASE_URL}/photos/${id}?api_key=${API_KEY}`
       );
       setPhoto(photoResponse.data);
 
       //   get the array of comments for that photo
       getComments();
-      
-
     } catch (error) {
       console.log(error);
     }
   }
 
-  async function getComments(){
+  async function getComments() {
     try {
-        const commentsResponse = await axios.get(
-          `${BASE_URL}/photos/${id}/comments?api_key=${API_KEY}`
-        );
-        setComments(commentsResponse.data);
-        
+      const commentsResponse = await axios.get(
+        `${VITE_BASE_URL}/photos/${id}/comments?api_key=${API_KEY}`
+      );
+      setComments(commentsResponse.data);
     } catch (error) {
-        console.log(error);
-        
+      console.log(error);
     }
-
   }
-
-
-
-
 
   useEffect(() => {
     getPhotoinfo();
   }, [id]);
 
-  if (Object.keys(photo).length === 0) return <h1 className="loading">Loading...</h1>
-    return (
-      <>
-        <nav className="nav">
+  if (Object.keys(photo).length === 0)
+    return <h1 className="loading">Loading...</h1>;
+  return (
+    <>
+      <nav className="nav">
+        <NavLink to={`/`} className={() => ""}>
           <h3 className="nav__title">Snaps</h3>
-          <NavLink to={`/`} className={() => ""}>
-            <div className="nav__return-btn">
-              <div className="return-btn__arrow">
-                <img src={arrow} alt="arrow icon" />
-              </div>
-              <h4 className="return-btn__home-label">Home</h4>
+        </NavLink>
+        <NavLink to={`/`} className={() => ""}>
+          <div className="nav__return-btn">
+            <div className="return-btn__arrow">
+              <img src={arrow} alt="arrow icon" />
             </div>
-          </NavLink>
-        </nav>
-        <div className="gap"></div>
-        {/* ---------------------------------- main ------------------------ */}
-        <main className="main">
-          <SinglePhotoCard photo={photo} />
-          <Form id={id} getComments={getComments} />
-          <Comments comments={comments} />
-        </main>
-        <Footer />
-      </>
-    );
+            <h4 className="return-btn__home-label">Home</h4>
+          </div>
+        </NavLink>
+      </nav>
+      <div className="gap"></div>
+      {/* ---------------------------------- main ------------------------ */}
+      <main className="main">
+        <SinglePhotoCard photo={photo} />
+        <Form id={id} getComments={getComments} />
+        <Comments comments={comments} />
+      </main>
+      <Footer />
+    </>
+  );
 }
 
 export default PhotoDetailsPage;

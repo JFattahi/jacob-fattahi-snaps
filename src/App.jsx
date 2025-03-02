@@ -6,7 +6,7 @@ import "./App.scss";
 import HomePage from "./pages/HomePage/HomePage";
 import PhotoDetailsPage from "./pages/PhotoDetailsPage/PhotoDetailsPage";
 
-import { VITE_BASE_URL, API_KEY } from "./utils";
+import { VITE_BASE_URL } from "./utils";
 import axios from "axios";
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
   async function getPhotosArray() {
     try {
       const { data } = await axios.get(
-        `${VITE_BASE_URL}/photos?api_key=${API_KEY}`
+        `${VITE_BASE_URL}/photos`
       );
       setPhotosArray(data);
     } catch (error) {

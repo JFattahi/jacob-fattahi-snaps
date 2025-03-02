@@ -1,5 +1,6 @@
 import "./PhotoCard.scss";
 import { NavLink } from "react-router-dom";
+import {VITE_PORT} from "../../utils";
 
 
 function PhotoCard({ photo, id, panelisOpen }) {
@@ -9,7 +10,8 @@ function PhotoCard({ photo, id, panelisOpen }) {
         <div className="photo__content">
           <img
             className="photo__image"
-            src={photo.photo}
+
+            src={`http://localhost:${VITE_PORT}${photo.photo}`}
             alt={photo.photoDescription}
           />
           <div className="photo__photographer">{photo.photographer}</div>

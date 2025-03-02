@@ -1,7 +1,7 @@
 import "./Form.scss";
 import { useState } from "react";
 import axios from "axios";
-import { VITE_BASE_URL, API_KEY } from "../../utils";
+import { VITE_BASE_URL } from "../../utils";
 
 function Form({ id, getComments }) {
   const [name, setName] = useState("");
@@ -22,7 +22,7 @@ function Form({ id, getComments }) {
 
     try {
       await axios.post(
-        `${VITE_BASE_URL}/photos/${id}/comments?api_key=${API_KEY}`,
+        `${VITE_BASE_URL}/photos/${id}/comments`,
         {
           name,
           comment,

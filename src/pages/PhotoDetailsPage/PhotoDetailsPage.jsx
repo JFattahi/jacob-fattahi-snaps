@@ -1,7 +1,7 @@
 import "./PhotoDetailsPage.scss";
 import { NavLink, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { VITE_BASE_URL, API_KEY } from "../../utils";
+import { VITE_BASE_URL } from "../../utils";
 import Form from "../../components/Form/Form";
 import Footer from "../../components/Footer/Footer";
 import SinglePhotoCard from "../../components/SinglePhotoCard/SinglePhotoCard";
@@ -22,7 +22,7 @@ function PhotoDetailsPage() {
     try {
       //   get a single photo by its id
       const photoResponse = await axios.get(
-        `${VITE_BASE_URL}/photos/${id}?api_key=${API_KEY}`
+        `${VITE_BASE_URL}/photos/${id}`
       );
       setPhoto(photoResponse.data);
 
@@ -36,7 +36,7 @@ function PhotoDetailsPage() {
   async function getComments() {
     try {
       const commentsResponse = await axios.get(
-        `${VITE_BASE_URL}/photos/${id}/comments?api_key=${API_KEY}`
+        `${VITE_BASE_URL}/photos/${id}/comments`
       );
       setComments(commentsResponse.data);
     } catch (error) {

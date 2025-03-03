@@ -21,13 +21,10 @@ function Form({ id, getComments }) {
     if (newErrors.name || newErrors.comment) return;
 
     try {
-      await axios.post(
-        `${VITE_BASE_URL}/photos/${id}/comments`,
-        {
-          name,
-          comment,
-        }
-      );
+      await axios.post(`${VITE_BASE_URL}/photos/${id}/comments`, {
+        name,
+        comment,
+      });
     } catch (error) {
       console.log(error);
     }

@@ -21,9 +21,7 @@ function PhotoDetailsPage() {
   async function getPhotoinfo() {
     try {
       //   get a single photo by its id
-      const photoResponse = await axios.get(
-        `${VITE_BASE_URL}/photos/${id}`
-      );
+      const photoResponse = await axios.get(`${VITE_BASE_URL}/photos/${id}`);
       setPhoto(photoResponse.data);
 
       //   get the array of comments for that photo
@@ -48,8 +46,10 @@ function PhotoDetailsPage() {
     getPhotoinfo();
   }, [id]);
 
-  if (Object.keys(photo).length === 0){return <h1 className="loading">Loading...</h1>;}
-    
+  if (Object.keys(photo).length === 0) {
+    return <h1 className="loading">Loading...</h1>;
+  }
+
   return (
     <>
       <nav className="nav">

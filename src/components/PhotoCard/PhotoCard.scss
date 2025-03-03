@@ -1,8 +1,6 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
-
-
 .photo {
   background-color: $sage;
   border: 1px solid $sea-green;
@@ -52,7 +50,6 @@
   &__photographer {
     display: inline-block;
 
-
     position: absolute;
     right: 0;
     bottom: 0;
@@ -94,13 +91,11 @@
 
     @include tablet {
       padding: 0.5rem 0.75rem;
-      border-radius: 0.75rem;
+      border-radius: 12px;
 
       font-size: 0.875rem;
       line-height: 1.0938rem;
       font-weight: 500;
     }
-    
   }
-
 } // end of .photo

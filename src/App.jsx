@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import { useState, useEffect } from "react";
 
@@ -15,9 +15,7 @@ function App() {
   // this function gets the photos array from the API
   async function getPhotosArray() {
     try {
-      const { data } = await axios.get(
-        `${VITE_BASE_URL}/photos`
-      );
+      const { data } = await axios.get(`${VITE_BASE_URL}/photos`);
       setPhotosArray(data);
     } catch (error) {
       console.log(error);
@@ -37,10 +35,7 @@ function App() {
             path="/"
             element={<HomePage photosArray={photosArray} />}
           ></Route>
-          <Route
-            path="/photoDetails/:id"
-            element={<PhotoDetailsPage />}
-          ></Route>
+          <Route path="/photos/:id" element={<PhotoDetailsPage />}></Route>
           <Route path="*" element={<h1>404 Page Not Found! </h1>}></Route>
         </Routes>
       </BrowserRouter>

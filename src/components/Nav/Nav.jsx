@@ -2,8 +2,6 @@ import "./Nav.scss";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
-
-
 function Nav({ panelState, setter }) {
   const [hover, setHover] = useState(false);
   const togglePanel = () => {
@@ -36,11 +34,7 @@ function Nav({ panelState, setter }) {
 
   // filter button diactive state
   const filterButtonActive = (
-    <button
-      
-      onClick={togglePanel}
-      className="nav__button nav__button--active"
-    >
+    <button onClick={togglePanel} className="nav__button nav__button--active">
       <p className="button__text">Filters</p>
       <svg
         width="15"

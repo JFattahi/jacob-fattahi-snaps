@@ -18,47 +18,49 @@
     }
   }
 
+  // comments__comment
   &__comment {
     border-top: 1.5px solid $sea-green;
     padding: 0 0;
-  }
 
-  // Text size: 10px | Line height: 12px | Text weight: Medium 500
-  &__comment-header {
-    margin: 0.875rem 0;
-    display: flex;
-    justify-content: space-between;
-    font-family: "Outfit";
-    font-weight: 500;
-    color: $forest-green;
+    // comments__comment__header
+    &-header {
+      margin: 0.875rem 0;
+      display: flex;
+      justify-content: space-between;
+      font-family: "Outfit";
+      font-weight: 500;
+      color: $forest-green;
 
-    font-size: 0.75rem;
-    line-height: 0.75rem;
+      font-size: 0.75rem;
+      line-height: 0.75rem;
 
-    @include tablet {
+      @include tablet {
+        font-size: 0.875rem;
+        margin: 1rem 0;
+      }
+
+      @include desktop {
+        font-size: 0.94rem;
+      }
+    } // edn of header
+
+    &-text {
+      font-family: "Outfit";
+      font-weight: 400;
+      color: $black;
+      margin-bottom: 0.875rem;
+
       font-size: 0.875rem;
-      margin: 1rem 0;
-    }
 
-    @include desktop {
-      font-size: 0.94rem;
-    }
-  }
-  &__comment-text {
-    font-family: "Outfit";
-    font-weight: 400;
-    color: $black;
-    margin-bottom: 0.875rem;
+      @include tablet {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+      }
 
-    font-size: 0.875rem;
-
-    @include tablet {
-      font-size: 1.25rem;
-      margin-bottom: 1rem;
+      @include desktop {
+        font-size: 1.33rem;
+      }
     }
-
-    @include desktop {
-      font-size: 1.33rem;
-    }
-  }
+  } // end of comment
 }

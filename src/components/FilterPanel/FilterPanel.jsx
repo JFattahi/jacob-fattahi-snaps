@@ -10,9 +10,7 @@ function FilterPanel({ clickedTag, setClickedTag }) {
   // get tag list from API
   async function getTagList() {
     try {
-      const { data } = await axios.get(
-        `${VITE_BASE_URL}/tags`
-      );
+      const { data } = await axios.get(`${VITE_BASE_URL}/tags`);
       setTagList(data);
     } catch (error) {
       console.log(error);

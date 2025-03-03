@@ -1,5 +1,4 @@
-
-import './HomePage.scss';
+import "./HomePage.scss";
 import { useState } from "react";
 
 import Nav from "../../components/Nav/Nav";
@@ -8,7 +7,7 @@ import FilterPanel from "../../components/FilterPanel/FilterPanel";
 import PhotoCard from "../../components/PhotoCard/PhotoCard";
 import Footer from "../../components/Footer/Footer";
 
-function HomePage( {photosArray} ) {
+function HomePage({ photosArray }) {
   const [panelisOpen, setPanelisOpen] = useState(false);
   const [clickedTag, setClickedTag] = useState(null);
   const filteredPhotos = clickedTag

@@ -1,5 +1,7 @@
 import "./SinglePhotoCard.scss";
 import likePic from '../../assets/icons/Like_Outline.svg';
+import { VITE_PORT } from "../../utils";
+
 
 
 function SinglePhotoCard({photo}) {
@@ -15,13 +17,16 @@ function SinglePhotoCard({photo}) {
     const formattedDate = formatTimestamp(photo.timestamp);
 
 
+      
+
     return (
       <>
         <div className={`singlePhotoCard`}>
           <div className="singlePhotoCard__content">
+            {console.log("from single photocard: " + photo.photo)}
             <img
               className="singlePhotoCard__image"
-              src={photo.photo}
+              src={`http://localhost:${VITE_PORT}${photo.photo}`}
               alt={photo.photoDescription}
             />
           </div>

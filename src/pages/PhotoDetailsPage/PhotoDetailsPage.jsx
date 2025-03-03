@@ -48,8 +48,8 @@ function PhotoDetailsPage() {
     getPhotoinfo();
   }, [id]);
 
-  if (Object.keys(photo).length === 0)
-    return <h1 className="loading">Loading...</h1>;
+  if (Object.keys(photo).length === 0){return <h1 className="loading">Loading...</h1>;}
+    
   return (
     <>
       <nav className="nav">
